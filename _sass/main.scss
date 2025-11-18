@@ -8,7 +8,7 @@ $accent: #0b5fff; // primary accent
 $accent-strong: #0849d1;
 
 // Typography
-$base-font-size: 10px; // keep 10px for easier rem math
+$base-font-size: 16px; // set readable base size (1rem = 16px)
 $bodyFont: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $headingFont: 'Merriweather', Georgia, 'Times New Roman', serif;
 $monoFont: SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
@@ -21,6 +21,7 @@ body {
   color: $text;
   font-family: $bodyFont;
   font-weight: 400;
+  font-size: 1rem; /* 16px */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,12 +42,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $headingFont;
   color: $text;
   margin-top: 1.6rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   line-height: 1.2;
 }
-h1 { font-size: 3.6rem; font-weight: 700; }
-h2 { font-size: 2.6rem; font-weight: 600; }
-h3 { font-size: 1.8rem; font-weight: 600; }
+/* Heading sizes tuned for 16px base */
+h1 { font-size: 2.25rem; font-weight: 700; } /* ~36px */
+h2 { font-size: 1.6rem; font-weight: 600; }  /* ~25.6px */
+h3 { font-size: 1.25rem; font-weight: 600; } /* ~20px */
+
 
 /* Buttons (bootstrap overrides) */
 .btn-primary {
@@ -84,7 +87,26 @@ code, kbd, pre, samp {
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.2rem; }
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+}
+
+/* Responsive embed (for gallery slides and other iframes) */
+.embed-responsive {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  /* 16:9 aspect ratio */
+  padding-top: 56.25%;
+  margin: 0 auto 1.6rem auto;
+}
+.embed-responsive iframe,
+.embed-responsive .embed-responsive-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
