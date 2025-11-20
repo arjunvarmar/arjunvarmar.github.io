@@ -7,7 +7,7 @@ Hello, and welcome to my homepage!
 
 I am a mechanical engineer turned computational materials scientist with experience in 
 modelling phase transformations and deformation induced microstructure evolution. 
-I am currently part of the [Microstructure and Stresses group](https://ijl.univ-lorraine.fr/en/research-groups/microstructures-and-stresses-group) at Institut Jean Lamour, Nancy (France) as a CNRS postdoctoral researcher with Benoit Appolaire and Maeva Cottura. 
+I am currently part of the [Microstructure and Stresses group](https://ijl.univ-lorraine.fr/en/research-groups/microstructures-and-stresses-group) at Institut Jean Lamour, Nancy (France) as a CNRS postdoctoral researcher with [Prof. Benoit Appolaire](https://scholar.google.com/citations?user=bPaKOooAAAAJ&hl=fr) and [Prof. Maeva Cottura](https://www.inc.cnrs.fr/fr/personne/maeva-cottura). 
 Here, I am trying to use the "sharp" phase field model for simulating the nuances of 
 discontinuous precipitation.   
 
