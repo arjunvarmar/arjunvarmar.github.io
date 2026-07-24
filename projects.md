@@ -34,6 +34,12 @@ if one profile $\phi_n = f(nd)$ is a stationary solution, then the shifted profi
 is also stationary for any shift $x_0$. A practical consequence is that the interfacial energy becomes much 
 less sensitive to grid placement, which is especially useful when studying moving or curved interfaces. 
 
+<figure align="center">
+  <img width="80%" height="80%" src="assets/img/sharp/phi_profiles.png">
+ <figcaption> Interface translation between two consecutive grid points. The idea is to keep interfacial energy equal for all configurations. </figcaption>
+</figure>
+
+
 
 The model starts from a discrete free-energy functional of the form
 
