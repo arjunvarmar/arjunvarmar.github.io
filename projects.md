@@ -37,29 +37,29 @@ less sensitive to grid placement, which is especially useful when studying movin
 
 The model starts from a discrete free-energy functional of the form
 
-\[
+$$
 F = d \sum_n \left[g(\phi_n) + \frac{\lambda}{2 d^2} \lVert \nabla \phi_n \rVert^2 \right].
-\]
+$$
 
-Here, \(\phi\) is the phase field, \(d\) is the grid spacing, \(\lambda\) controls the interface cost, and \(g(\phi)\) 
+Here, $\phi$ is the phase field, $d$ is the grid spacing, $\lambda$ controls the interface cost, and $g(\phi)$ 
 is a local energy density chosen to work well with the discrete gradient term. The evolution follows an Allen-Cahn-type equation,
 
-\[
+$$
 \frac{\partial \phi}{\partial t} = -L \frac{\delta F}{\delta \phi},
-\]
+$$
 
 with
 
-\[
+$$
 \frac{\delta F}{\delta \phi} = g'(\phi) - \lambda \Delta f(\phi).
-\]
+$$
 
 In the implementation, the interface orientation enters through a smooth factor based on a hyperbolic tangent profile, 
 which helps enforce the desired invariance properties.
 
-The function \(g(\\phi)\) obtained by the translational invariance of the interfacial energy is:
+The function $g(\\phi)$ obtained by the translational invariance of the interfacial energy is:
 
-\[
+$$
 g(\phi) = \frac{\lambda}{4} \sum_{i=1}^{2} \gamma_i \frac{\nu_i}{d_i^2}
 \sum_{s=1}^{N_s}
 \left\{
@@ -68,16 +68,15 @@ g(\phi) = \frac{\lambda}{4} \sum_{i=1}^{2} \gamma_i \frac{\nu_i}{d_i^2}
 \frac{16 \phi (1-\phi)(1-2\phi)}{1 - \alpha(\vec r_i(s))^2 (2\phi - 1)^2}
 \right)
 \right\}
-\]
+$$
 
 where,
 
-\[
+$$
 \alpha(\vec r_i(s)) = \tanh\!\left(\frac{\vec r_i(s)\cdot \vec u}{w}\right).
-\]
+$$
 
-The interfacial energy in 1-D is numerically calculated as \(
-\gamma = 0.4426 \frac{\lambda}{d}\) irrespective of fractional translations of the interface. 
+The interfacial energy in 1-D is numerically calculated as $\gamma = 0.44263553 \frac{\lambda}{d}$ irrespective of fractional translations of the interface. 
 
 
 
