@@ -6,14 +6,14 @@ title: "Projects"
 ### **My Projects**
 
 - [Sharp phase field models for microstructure evolution](#sharp-phase-field-models-for-microstructure-evolution)
-- [Phase field crystal models for defect microstructures](#phase-field-crystal-models-for-defect-microstructures)
 - [Dislocation assisted phase separation and coarsening](#dislocation-assisted-phase-separation-and-coarsening)
 - [Surface diffusion enhanced disintegration of nanowires](#surface-diffusion-enhanced-disintegration-of-nanowires)
 - [Multiscale model for equilibrium stacking fault width calculation of alloys](#multiscale-model-for-equilibrium-stacking-fault-width-calculation-of-alloys)
+- [Phase field crystal models for defect microstructures](#phase-field-crystal-models-for-defect-microstructures)
 - [Electron-phonon interaction corrections in total energy of group IV semiconductors](#electron-phonon-interaction-corrections-in-total-energy-of-group-iv-semiconductors)
 - [Slip transfer at a boundary in discrete dislocation dynamics simulations](#slip-transfer-at-a-boundary-in-discrete-dislocation-dynamics-simulations)
 
-###### Last updated: July 24, 2026 (This page is currently being modified to add the latest updates)
+###### Last updated: July 24, 2026 
 ---
 
 #### **Sharp phase field models for microstructure evolution**
@@ -89,7 +89,7 @@ The interfacial energy in 1-D is numerically calculated as $0.44263553 \frac{\la
 Here is a test simulation that we have done using the sharp phase field method. We are currently in-process of extending the model to 
 incorporate elasticity.
 
-<figure align="right">
+<figure align="center">
   <img width="50%" height="50%" src="assets/img/sharp/grain_size_scaled.gif">
   <figcaption> Precipitate growth along with grain migration. </figcaption>
 </figure>
@@ -251,6 +251,27 @@ The dislocations are located by taking the derivative of the cumulative displace
 </figure>
 
 It is also possible to measure the equilibrium stacking fault of the system using this method. We are currently preparing a manuscript studying the variation in the equilibrium stacking fault width in Cu-Al system at different Al concentrations.
+
+[Back to top](https://arjunvarmar.github.io/projects)
+
+#### **Phase field crystal models for defect microstructures**
+
+In September 2021, I narrowly missed a week-long intensive course on phase field crystal modelling by Professor Kuo-An Wu. 
+But, as fate would have it, I had to eventually meet this variant again, at the group of Professor Conrard Feugmo at University of Waterloo. The idea 
+was to generate a firm foundation for phase field crystal models in the group and work towards extending the models 
+for a multicomponent system. The crux of the problem was in correctly incorporating the interactions between different 
+types of atoms using the correct pair correlation functions. Eventually, we realized that for applications that we 
+were interested in, the modifications were beyond the reach in terms of computational resources. However, I gained quite 
+a bit of expertise and developed several repositories of parallelized (CUDA and MPI C) solvers for structural phase field 
+crystal method. I also developed significant experience in SymPy, Mathematica and Maple to generate the phase diagrams in the 
+different cases. 
+
+Here is an example simulation of grain growth, resolved to atomic level, by a two-component structural PFC simulation.
+
+<figure align="center">
+  <img width="80%" height="80%" src="assets/img/pfc/density.gif">
+  <figcaption> Grain growth in a two-component system (red and black). Dislocations that form a tilt boundary and rotating grain boundaries can also bee seen. </figcaption>
+</figure>
 
 [Back to top](https://arjunvarmar.github.io/projects)
 
