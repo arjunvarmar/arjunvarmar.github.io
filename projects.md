@@ -35,7 +35,7 @@ is also stationary for any shift $x_0$. A practical consequence is that the inte
 less sensitive to grid placement, which is especially useful when studying moving or curved interfaces. 
 
 <figure align="center">
-  <img width="80%" height="80%" src="assets/img/sharp/phi_profiles.png">
+  <img width="40%" height="40%" src="assets/img/sharp/phi_profiles.png">
  <figcaption> Interface translation between two consecutive grid points. The idea is to keep interfacial energy equal for all configurations. </figcaption>
 </figure>
 
@@ -81,6 +81,12 @@ where,
 $$
 \alpha(\vec r_i(s)) = \tanh\!\left(\frac{\vec r_i(s)\cdot \vec u}{w}\right).
 $$
+
+
+<figure align="center">
+  <img width="40%" height="40%" src="assets/img/sharp/double_wells.png">
+ <figcaption> A comparison of the width-specific double-wells $g(\phi)$ with the conventional double-well given by the $\phi^2(1-\phi)^2$ polynomial  </figcaption>
+</figure>
 
 The interfacial energy in 1-D is numerically calculated as $\gamma = 0.44263553 \frac{\lambda}{d}$ irrespective of fractional translations of the interface. 
 
