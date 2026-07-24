@@ -13,7 +13,7 @@ title: "Projects"
 - [Electron-phonon interaction corrections in total energy of group IV semiconductors](#electron-phonon-interaction-corrections-in-total-energy-of-group-iv-semiconductors)
 - [Slip transfer at a boundary in discrete dislocation dynamics simulations](#slip-transfer-at-a-boundary-in-discrete-dislocation-dynamics-simulations)
 
-###### Last updated: July 24, 2026
+###### Last updated: July 24, 2026 (This page is currently being modified to add the latest updates)
 ---
 
 #### **Sharp phase field models for microstructure evolution**
@@ -29,9 +29,9 @@ between).
 
 In a standard discrete phase-field model, the energy of an interface can depend on where the interface falls 
 relative to the mesh. That is a numerical artifact: the physics should not change just because the interface is 
-shifted by a fraction of a grid spacing. This work seeks a function \(g(\phi)\) and a discretization such that 
-if one profile \(\phi_n = f(nd)\) is a stationary solution, then the shifted profile \(\phi_n = f(nd - x_0)\) 
-is also stationary for any shift \(x_0\).A practical consequence is that the interfacial energy becomes much 
+shifted by a fraction of a grid spacing. This work seeks a function $g(\phi)$ and a discretization such that 
+if one profile $\phi_n = f(nd)$ is a stationary solution, then the shifted profile $\phi_n = f(nd - x_0)$
+is also stationary for any shift $x_0$. A practical consequence is that the interfacial energy becomes much 
 less sensitive to grid placement, which is especially useful when studying moving or curved interfaces. 
 
 
