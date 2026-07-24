@@ -260,8 +260,15 @@ In September 2021, I narrowly missed a week-long intensive course on phase field
 But, as fate would have it, I had to eventually meet this variant again, at the group of Professor Conrard Feugmo at University of Waterloo. The idea 
 was to generate a firm foundation for phase field crystal models in the group and work towards extending the models 
 for a multicomponent system. The crux of the problem was in correctly incorporating the interactions between different 
-types of atoms using the correct pair correlation functions. Eventually, we realized that for applications that we 
-were interested in, the modifications were beyond the reach in terms of computational resources. However, I gained quite 
+types of atoms using the correct pair correlation functions. 
+
+We could not use the traditional approach in literature where an average density and concentration fields were used to 
+correctly represent the microstructure. This would not be able to capture the local variations due to the long rangedness of 
+the concentration fields. Instead, we had to use individual density fields that interacted with each other by virtue of 
+pair-correlation functions. 
+
+Eventually, we realized that for applications that we were interested in, we had to employ three-point correlation functions, which, 
+for the systems we were interested in, wasbeyond the reach in terms of computational resources. However, I gained quite 
 a bit of expertise and developed several repositories of parallelized (CUDA and MPI C) solvers for structural phase field 
 crystal method. I also developed significant experience in SymPy, Mathematica and Maple to generate the phase diagrams in the 
 different cases. 
