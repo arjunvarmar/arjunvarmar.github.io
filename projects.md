@@ -76,21 +76,29 @@ g(\phi) = \frac{\lambda}{4} \sum_{i=1}^{2} \gamma_i \frac{\nu_i}{d_i^2}
 \right\}
 $$
 
-where,
-
-$$
-\alpha(\vec r_i(s)) = \tanh\!\left(\frac{\vec r_i(s)\cdot \vec u}{w}\right).
-$$
-
+where,$\alpha(\vec r_i(s)) = \tanh\!\left(\frac{\vec r_i(s)\cdot \vec u}{w}\right)$, $\gamma_i$ is a coefficient of the discrete laplacian operator and $\nu_i$ is 
+the a parameter that deals with the multiplicity of each shells.  
 
 <figure align="center">
   <img width="40%" height="40%" src="assets/img/sharp/double_wells.png">
  <figcaption> A comparison of the width-specific double-wells $g(\phi)$ with the conventional double-well given by the $\phi^2(1-\phi)^2$ polynomial  </figcaption>
 </figure>
 
-The interfacial energy in 1-D is numerically calculated as $\gamma = 0.44263553 \frac{\lambda}{d}$ irrespective of fractional translations of the interface. 
+The interfacial energy in 1-D is numerically calculated as $0.44263553 \frac{\lambda}{d}$ irrespective of fractional translations of the interface. 
 
+Here is a couple of test simulations that we can done using the sharp phase field method. We are currently in-process of extending the model to 
+incorporate elasticity.
 
+<figure align="left">
+  <img width="30%" height="30%" src="assets/img/grain_growth.gif">
+  <figcaption> Grain growth </figcaption>
+</figure>
+
+<figure align="right">
+  <img width="30%" height="30%" src="assets/img/grain_size_scaled.gif">
+  <figcaption> Precipitate growth along with grain migration. </figcaption>
+</figure>
+ 
 
 #### **Dislocation assisted phase separation and coarsening**
 
