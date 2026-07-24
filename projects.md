@@ -86,18 +86,17 @@ the a parameter that deals with the multiplicity of each shells.
 
 The interfacial energy in 1-D is numerically calculated as $0.44263553 \frac{\lambda}{d}$ irrespective of fractional translations of the interface. 
 
-Here is a couple of test simulations that we can done using the sharp phase field method. We are currently in-process of extending the model to 
+Here is a test simulation that we have done using the sharp phase field method. We are currently in-process of extending the model to 
 incorporate elasticity.
 
-<figure align="left">
-  <img width="30%" height="30%" src="assets/img/sharp/grain_growth.gif">
-  <figcaption> Grain growth </figcaption>
-</figure>
-
 <figure align="right">
-  <img width="30%" height="30%" src="assets/img/sharp/grain_size_scaled.gif">
+  <img width="50%" height="50%" src="assets/img/sharp/grain_size_scaled.gif">
   <figcaption> Precipitate growth along with grain migration. </figcaption>
 </figure>
+
+Watch this space for updates!
+
+[Back to top](https://arjunvarmar.github.io/projects)
  
 
 #### **Dislocation assisted phase separation and coarsening**
