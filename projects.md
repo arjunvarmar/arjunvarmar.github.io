@@ -90,12 +90,12 @@ Here is a couple of test simulations that we can done using the sharp phase fiel
 incorporate elasticity.
 
 <figure align="left">
-  <img width="30%" height="30%" src="assets/img/grain_growth.gif">
+  <img width="30%" height="30%" src="assets/img/sharp/grain_growth.gif">
   <figcaption> Grain growth </figcaption>
 </figure>
 
 <figure align="right">
-  <img width="30%" height="30%" src="assets/img/grain_size_scaled.gif">
+  <img width="30%" height="30%" src="assets/img/sharp/grain_size_scaled.gif">
   <figcaption> Precipitate growth along with grain migration. </figcaption>
 </figure>
  

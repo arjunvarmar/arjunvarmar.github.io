@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+
+    <!-- Phase 1 Glow (Matrix/Liquid) -->
+    <radialGradient id="phase1" cx="35%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.8" />
+      <stop offset="40%" stop-color="#1d4ed8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Phase 2 Glow (Precipitate/Solid) -->
+    <radialGradient id="phase2" cx="65%" cy="65%" r="55%">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#b91c1c" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#b91c1c" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Interface Blur for Continuous Field Effect -->
+    <filter id="interfaceBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    
+    <!-- UI Elements Glow -->
+    <filter id="uiGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base App Icon Container -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" stroke="#1f2937" stroke-width="4" />
+
+  <!-- Microstructure Simulated Field Area -->
+  <g filter="url(#interfaceBlur)">
+    <!-- Interconnected Spinodal/Dendritic Morphologies -->
+    <!-- Blue/Matrix Phase Regions -->
+    <path d="M 80 120 C 140 100, 160 200, 220 180 C 280 160, 310 100, 380 140 C 440 180, 420 280, 360 300 C 300 320, 290 400, 220 420 C 150 440, 100 360, 120 280 C 140 200, 20 140, 80 120 Z" fill="url(#phase1)" />
+    
+    <!-- Red/Precipitate Phase Regions -->
+    <path d="M 430 380 C 370 400, 320 320, 260 340 C 200 360, 180 420, 120 380 C 60 340, 80 240, 140 220 C 200 200, 220 120, 290 100 C 360 80, 400 160, 380 240 C 360 320, 490 360, 430 380 Z" fill="url(#phase2)" />
+    
+    <!-- Central Evolving Node -->
+    <circle cx="256" cy="256" r="75" fill="#10b981" opacity="0.4" />
+    <circle cx="280" cy="220" r="45" fill="#f59e0b" opacity="0.3" />
+  </g>
+
+  <!-- Mesh Grid Overlay (Signifying Computational Math/FEM) -->
+  <g stroke="#ffffff" stroke-width="1" opacity="0.08">
+    <!-- Vertical Lines -->
+    <line x1="64" y1="0" x2="64" y2="512" />
+    <line x1="128" y1="0" x2="128" y2="512" />
+    <line x1="192" y1="0" x2="192" y2="512" />
+    <line x1="256" y1="0" x2="256" y2="512" />
+    <line x1="320" y1="0" x2="320" y2="512" />
+    <line x1="384" y1="0" x2="384" y2="512" />
+    <line x1="448" y1="0" x2="448" y2="512" />
+    <!-- Horizontal Lines -->
+    <line x1="0" y1="64" x2="512" y2="64" />
+    <line x1="0" y1="128" x2="512" y2="128" />
+    <line x1="0" y1="192" x2="512" y2="192" />
+    <line x1="0" y1="256" x2="512" y2="256" />
+    <line x1="0" y1="320" x2="512" y2="320" />
+    <line x1="0" y1="384" x2="512" y2="384" />
+    <line x1="0" y1="448" x2="512" y2="448" />
+  </g>
+
+  <!-- Tech/Software Interface Accents (Outer Ring & Crosshairs) -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#4b5563" stroke-width="2" stroke-dasharray="8 12" opacity="0.4" />
+  <circle cx="256" cy="256" r="240" fill="none" stroke="#10b981" stroke-width="3" opacity="0.25" filter="url(#uiGlow)" />
+  
+  <!-- Boundary Interface Indicators (Mathematical brackets/corners) -->
+  <g stroke="#38bdf8" stroke-width="3" fill="none" filter="url(#uiGlow)" opacity="0.8">
+    <!-- Top Left -->
+    <path d="M 40 80 L 40 40 L 80 40" />
+    <!-- Top Right -->
+    <path d="M 472 80 L 472 40 L 432 40" />
+    <!-- Bottom Left -->
+    <path d="M 40 432 L 40 472 L 80 472" />
+    <!-- Bottom Right -->
+    <path d="M 472 432 L 472 472 L 432 472" />
+  </g>
+</svg>
