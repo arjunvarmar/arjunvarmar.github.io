@@ -76,7 +76,7 @@ g(\phi) = \frac{\lambda}{4} \sum_{i=1}^{2} \gamma_i \frac{\nu_i}{d_i^2}
 \right\}
 $$
 
-where,$\alpha(\vec r_i(s)) = \tanh\!\left(\frac{\vec r_i(s)\cdot \vec u}{w}\right)$, $\gamma_i$ is a coefficient of the discrete laplacian operator and $\nu_i$ is 
+where, $\alpha(\vec r_i(s)) = \tanh\left(\frac{\vec r_i(s)\cdot \vec u}{w}\right)$, $\gamma_i$ is a coefficient of the discrete laplacian operator and $\nu_i$ is 
 the a parameter that deals with the multiplicity of each shells.  
 
 <figure align="center">
