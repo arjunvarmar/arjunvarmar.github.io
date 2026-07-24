@@ -5,14 +5,81 @@ title: "Projects"
 
 ### **My Projects**
 
+- [Sharp phase field models for microstructure evolution](#sharp-phase-field-models-for-microstructure-evolution)
+- [Phase field crystal models for defect microstructures](#phase-field-crystal-models-for-defect-microstructures)
 - [Dislocation assisted phase separation and coarsening](#dislocation-assisted-phase-separation-and-coarsening)
 - [Surface diffusion enhanced disintegration of nanowires](#surface-diffusion-enhanced-disintegration-of-nanowires)
 - [Multiscale model for equilibrium stacking fault width calculation of alloys](#multiscale-model-for-equilibrium-stacking-fault-width-calculation-of-alloys)
 - [Electron-phonon interaction corrections in total energy of group IV semiconductors](#electron-phonon-interaction-corrections-in-total-energy-of-group-iv-semiconductors)
 - [Slip transfer at a boundary in discrete dislocation dynamics simulations](#slip-transfer-at-a-boundary-in-discrete-dislocation-dynamics-simulations)
 
-###### Last updated: October 30, 2024
+###### Last updated: July 24, 2026
 ---
+
+#### **Sharp phase field models for microstructure evolution**
+
+I have been chasing this development in the phase field literature since the later part of my PhD. The method is a very 
+promising approach to eliminate grid pinning and deal well with interfaces that are resolved with fewer grid points. 
+The basic method involves the determination of a free energy functional in such a way that the interfacial energy 
+remains constant during every step in the translation of the interface from one grid point to the next. The development 
+of the free energy functional for the 1-D case and subsequent generalizations into the 2-D and 3-D cases are made elegantly 
+in the original article by Professor Finel and co-workers (although, it took me a while to figure out all the steps in 
+between). 
+
+
+In a standard discrete phase-field model, the energy of an interface can depend on where the interface falls 
+relative to the mesh. That is a numerical artifact: the physics should not change just because the interface is 
+shifted by a fraction of a grid spacing. This work seeks a function \(g(\phi)\) and a discretization such that 
+if one profile \(\phi_n = f(nd)\) is a stationary solution, then the shifted profile \(\phi_n = f(nd - x_0)\) 
+is also stationary for any shift \(x_0\).A practical consequence is that the interfacial energy becomes much 
+less sensitive to grid placement, which is especially useful when studying moving or curved interfaces. 
+
+
+The model starts from a discrete free-energy functional of the form
+
+\[
+F = d \sum_n \left[g(\phi_n) + \frac{\lambda}{2 d^2} \lVert \nabla \phi_n \rVert^2 \right].
+\]
+
+Here, \(\phi\) is the phase field, \(d\) is the grid spacing, \(\lambda\) controls the interface cost, and \(g(\phi)\) 
+is a local energy density chosen to work well with the discrete gradient term. The evolution follows an Allen-Cahn-type equation,
+
+\[
+\frac{\partial \phi}{\partial t} = -L \frac{\delta F}{\delta \phi},
+\]
+
+with
+
+\[
+\frac{\delta F}{\delta \phi} = g'(\phi) - \lambda \Delta f(\phi).
+\]
+
+In the implementation, the interface orientation enters through a smooth factor based on a hyperbolic tangent profile, 
+which helps enforce the desired invariance properties.
+
+The function \(g(\\phi)\) obtained by the translational invariance of the interfacial energy is:
+
+\[
+g(\phi) = \frac{\lambda}{4} \sum_{i=1}^{2} \gamma_i \frac{\nu_i}{d_i^2}
+\sum_{s=1}^{N_s}
+\left\{
+\frac{1 - \alpha(\vec r_i(s))^2}{\alpha(\vec r_i(s))^2}
+\left(
+\frac{16 \phi (1-\phi)(1-2\phi)}{1 - \alpha(\vec r_i(s))^2 (2\phi - 1)^2}
+\right)
+\right\}
+\]
+
+where,
+
+\[
+\alpha(\vec r_i(s)) = \tanh\!\left(\frac{\vec r_i(s)\cdot \vec u}{w}\right).
+\]
+
+The interfacial energy in 1-D is numerically calculated as \(
+\gamma = 0.4426 \frac{\lambda}{d}\) irrespective of fractional translations of the interface. 
+
+
 
 #### **Dislocation assisted phase separation and coarsening**
 
