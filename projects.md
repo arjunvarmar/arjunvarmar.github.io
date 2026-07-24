@@ -273,7 +273,8 @@ a bit of expertise and developed several repositories of parallelized (CUDA and 
 crystal method. I also developed significant experience in SymPy, Mathematica and Maple to generate the phase diagrams in the 
 different cases. 
 
-Here is an example simulation of grain growth, resolved to atomic level, by a two-component structural PFC simulation.
+Here is an example simulation of grain growth, resolved to atomic level, by a two-component structural PFC simulation. The gif shows 
+superimposed density fields, in black and red. This is a 2D simulation and the parameters stabilize an interpenetrating square lattice.
 
 <figure align="center">
   <img width="80%" height="80%" src="assets/img/pfc/density.gif">
